@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addCitiesTextField: UITextField!
     @IBOutlet weak var floatMapButton: UIButton!
-
+    @IBOutlet weak var addButton: UIButton!
     
     var savedCities: [City] = []
     var weatherManager = WeatherManager()
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         localStorageManager.delegate = self
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         tableView.addGestureRecognizer(longPress)
-        
+        addButton.layer.cornerRadius = 10
         setFloatMapButton()
     }
 

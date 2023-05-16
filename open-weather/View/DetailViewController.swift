@@ -23,7 +23,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var forecastCollectionView: UICollectionView!
     
     var fiveDaysForecastData: [ForecastModel] = []
-//    var fiveDaysForecastData = [1,2,3]
 
     var weatherManager = WeatherManager()
     var localStorageManager = LocalStorageManager()
@@ -101,7 +100,7 @@ extension DetailViewController: ForecastManagerDelegate {
     }
 }
 
-extension DetailViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension DetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return fiveDaysForecastData.count
     }
@@ -114,11 +113,6 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
         cell.humidityLable.text = String(forecast.humidity)
         cell.descriptionLabel.text = forecast.description.capitalized
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = collectionView.frame.size.width
-        return CGSize(width: 270, height: size)
     }
 }
 
