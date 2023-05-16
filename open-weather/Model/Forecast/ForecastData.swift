@@ -15,4 +15,5 @@ struct FiveDaysForecast: Codable {
     let main: Main
     let weather: [Weather]
     let wind: Wind
+    let dt_txt: String
 }

@@ -378,6 +378,11 @@
                                                                         <constraint firstAttribute="height" constant="100" id="i2j-gK-p1H"/>
                                                                     </constraints>
                                                                 </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z70-YK-qz4">
+                                                                    <rect key="frame" x="84" y="216.66666666666666" width="92" height="21.666666666666657"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="SdY-Po-rxV">
                                                                     <rect key="frame" x="68.333333333333343" y="253.33333333333331" width="123.33333333333334" height="24"/>
                                                                     <subviews>
@@ -398,20 +403,23 @@
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z70-YK-qz4">
-                                                                    <rect key="frame" x="84" y="216.66666666666666" width="92" height="21.666666666666657"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK5-bb-hkC" userLabel="DateLabel">
+                                                                    <rect key="frame" x="118.99999999999999" y="398" width="22.333333333333329" height="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                                    <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.92205707398883652" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstItem="0Ed-aQ-uFQ" firstAttribute="top" secondItem="Mrg-9w-roU" secondAttribute="top" constant="15" id="8Ja-Rm-p8X"/>
+                                                                <constraint firstItem="hK5-bb-hkC" firstAttribute="centerX" secondItem="Mrg-9w-roU" secondAttribute="centerX" id="FzT-FK-b7d"/>
                                                                 <constraint firstAttribute="height" constant="420" id="GIR-an-JYu"/>
                                                                 <constraint firstItem="SdY-Po-rxV" firstAttribute="centerX" secondItem="Mrg-9w-roU" secondAttribute="centerX" id="GzA-e0-cez"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="HXN-Ug-BVY"/>
                                                                 <constraint firstItem="gcO-Wn-cP0" firstAttribute="centerX" secondItem="Mrg-9w-roU" secondAttribute="centerX" id="OJE-I6-15L"/>
                                                                 <constraint firstAttribute="width" constant="260" id="V2u-1A-Y8S"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hK5-bb-hkC" secondAttribute="bottom" constant="10" id="bNO-bb-0lE"/>
                                                                 <constraint firstItem="0Ed-aQ-uFQ" firstAttribute="centerX" secondItem="Mrg-9w-roU" secondAttribute="centerX" id="cJn-1G-NAK"/>
                                                                 <constraint firstItem="Z70-YK-qz4" firstAttribute="centerX" secondItem="Mrg-9w-roU" secondAttribute="centerX" id="cic-Mv-DEa"/>
                                                                 <constraint firstItem="SdY-Po-rxV" firstAttribute="top" secondItem="Z70-YK-qz4" secondAttribute="bottom" constant="15" id="gmq-ai-gE8"/>
@@ -438,6 +446,7 @@
                                                 </collectionViewCellContentView>
                                                 <connections>
                                                     <outlet property="conditionImageView" destination="gcO-Wn-cP0" id="OtJ-GI-FLR"/>
+                                                    <outlet property="dateLabel" destination="hK5-bb-hkC" id="NwQ-70-HxY"/>
                                                     <outlet property="descriptionLabel" destination="Z70-YK-qz4" id="ULE-9h-FMF"/>
                                                     <outlet property="humidityLable" destination="brC-D1-0cB" id="FYo-rJ-jyi"/>
                                                     <outlet property="temperatureLabel" destination="LBM-Ql-qwJ" id="OkH-Gj-hHz"/>

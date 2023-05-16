@@ -86,10 +86,10 @@ extension DetailViewController: WeatherManagerDelegate {
 }
 
 extension DetailViewController: ForecastManagerDelegate {
-    func didUpdateForecast(_ weatherManager: WeatherManager, forecast: ForecastData) {
+    func didUpdateForecast(_ weatherManager: WeatherManager, forecast: [FiveDaysForecast]) {
         DispatchQueue.main.async {
-            forecast.list.forEach { item in
-                self.fiveDaysForecastData.append(ForecastModel(conditionId: item.weather[0].id, temperature: item.main.temp, humidity: item.main.humidity, main: item.weather[0].main, description: item.weather[0].description, wind: item.wind.speed))
+            forecast.forEach { item in
+                self.fiveDaysForecastData.append(ForecastModel(conditionId: item.weather[0].id, temperature: item.main.temp, humidity: item.main.humidity, main: item.weather[0].main, description: item.weather[0].description, wind: item.wind.speed, date: item.dt_txt))
             }
             self.forecastCollectionView.reloadData()
         }
@@ -107,11 +107,12 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "forecastDetails", for: indexPath) as! ForecastCollectionViewCell
-        let forecast = fiveDaysForecastData[indexPath.count]
-        cell.temperatureLabel.text = String(forecast.temperature)
+        let forecast = fiveDaysForecastData[indexPath.row]
+        cell.temperatureLabel.text = String(forecast.temperatureString)
         cell.conditionImageView.image = UIImage(systemName: forecast.conditionName)
         cell.humidityLable.text = String(forecast.humidity)
         cell.descriptionLabel.text = forecast.description.capitalized
+        cell.dateLabel.text = forecast.date
         return cell
     }
 }

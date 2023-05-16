@@ -14,6 +14,7 @@ struct ForecastModel {
     let main: String
     let description: String
     let wind: Double
+    let date: String
     
     var temperatureString: String {
         return String(format: "%.1f", temperature)

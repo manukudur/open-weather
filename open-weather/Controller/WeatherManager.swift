@@ -14,7 +14,7 @@ protocol WeatherManagerDelegate {
 }
 
 protocol ForecastManagerDelegate {
-    func didUpdateForecast(_ weatherManager: WeatherManager, forecast: ForecastData)
+    func didUpdateForecast(_ weatherManager: WeatherManager, forecast: [FiveDaysForecast])
     func didForecastFailWithError(error: Error)
 }
 
@@ -104,11 +104,24 @@ struct WeatherManager {
         }
     }
     
-    func parseForecastJSON(_ weatherData: Data) -> ForecastData? {
+    func parseForecastJSON(_ weatherData: Data) -> [FiveDaysForecast]? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(ForecastData.self, from: weatherData)
-            return decodedData
+            var fiveForecastData = [String: FiveDaysForecast]()
+            
+            decodedData.list.forEach { forecast in
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+
+                if let date = dateFormatter.date(from: forecast.dt_txt) {
+                    dateFormatter.dateFormat = "MM-dd-yyyy"
+                    let stringDate = dateFormatter.string(from: date)
+                    fiveForecastData[stringDate] = forecast
+                }
+                
+            }
+            return Array(fiveForecastData.values)
             
         } catch {
             delegate?.didFailWithError(error: error)
