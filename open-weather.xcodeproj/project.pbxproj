@@ -24,6 +24,7 @@
 		FC701BC92A0DE7320059D55A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC701BC82A0DE7320059D55A /* City.swift */; };
 		FC72CF592A0E7C24008183B0 /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72CF582A0E7C24008183B0 /* LocalStorageManager.swift */; };
 		FC73D8302A148DB600B10E52 /* Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC73D82F2A148DB600B10E52 /* Documentation.pdf */; };
+		FC73D8322A14999A00B10E52 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73D8312A14999A00B10E52 /* Constants.swift */; };
 		FCDD600B2A09539A0022D833 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDD600A2A09539A0022D833 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		FC701BC82A0DE7320059D55A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FC72CF582A0E7C24008183B0 /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 		FC73D82F2A148DB600B10E52 /* Documentation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Documentation.pdf; sourceTree = "<group>"; };
+		FC73D8312A14999A00B10E52 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FCDD600A2A09539A0022D833 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FCEF50672A13B9B800B2926E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 		FCEF50692A13BA1900B2926E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FC73D8312A14999A00B10E52 /* Constants.swift */,
 				FCEF50672A13B9B800B2926E /* CardView.swift */,
 			);
 			path = Utils;
@@ -238,6 +241,7 @@
 				FC7016E92A11F4F80088BA36 /* ForecastData.swift in Sources */,
 				FC2690C72A10D7D6000F5219 /* ForecastCollectionViewCell.swift in Sources */,
 				FC0657CF2A09143200848296 /* HomeViewController.swift in Sources */,
+				FC73D8322A14999A00B10E52 /* Constants.swift in Sources */,
 				FC6A677D2A0CB24A002E2FB2 /* WeatherModel.swift in Sources */,
 				FC7016ED2A11FE100088BA36 /* ForecastModel.swift in Sources */,
 				FC5D07342A0926FF00343BA6 /* DetailViewController.swift in Sources */,

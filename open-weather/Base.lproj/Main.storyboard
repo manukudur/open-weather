@@ -156,7 +156,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="zpW-il-bkh">
-                        <barButtonItem key="rightBarButtonItem" image="info.circle" catalog="system" id="EvZ-lg-ueZ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="EvZ-lg-ueZ">
                             <connections>
                                 <segue destination="jul-QD-GYG" kind="show" id="Ypc-os-abv"/>
                             </connections>
