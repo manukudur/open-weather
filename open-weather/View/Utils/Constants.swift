@@ -6,5 +6,5 @@
 //
 
 struct K {
-    static let apiKey = "YOUR API KEY"
+    static let apiKey = "YOUR_API_KEY"
 }
