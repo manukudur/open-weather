@@ -539,12 +539,12 @@
         <segue reference="Jab-gf-f1z"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
-        <image name="map" catalog="system" width="128" height="112"/>
-        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="sun.min.fill" catalog="system" width="128" height="123"/>
+        <image name="bookmark" catalog="system" width="32" height="32"/>
+        <image name="info.circle" catalog="system" width="32" height="32"/>
+        <image name="map" catalog="system" width="32" height="32"/>
+        <image name="mappin.and.ellipse" catalog="system" width="32" height="32"/>
+        <image name="plus" catalog="system" width="32" height="32"/>
+        <image name="sun.min.fill" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
