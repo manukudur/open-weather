@@ -1,6 +1,6 @@
 #  Weather App
 
-### Please add your 'apiKey' value in 'Constants.swift' file.
+### Please add your 'apiKey' value in 'Model/Constants.swift' file.
 
 ```
 struct K {

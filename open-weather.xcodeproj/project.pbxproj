@@ -111,12 +111,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FC2C4DA92A14E29E00FE2FA9 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				FC701BC82A0DE7320059D55A /* City.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
 		FC6A67792A0CB0E0002E2FB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC73D8312A14999A00B10E52 /* Constants.swift */,
 				FC7016EB2A11FDEC0088BA36 /* Forecast */,
 				FC7016EA2A11FDCC0088BA36 /* Weather */,
-				FC701BC82A0DE7320059D55A /* City.swift */,
+				FC2C4DA92A14E29E00FE2FA9 /* City */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,7 +168,6 @@
 		FCEF50692A13BA1900B2926E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FC73D8312A14999A00B10E52 /* Constants.swift */,
 				FCEF50672A13B9B800B2926E /* CardView.swift */,
 			);
 			path = Utils;
