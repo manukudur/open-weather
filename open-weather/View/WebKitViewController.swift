@@ -14,16 +14,14 @@ class WebKitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let filePath = Bundle.main.path(forResource: "web-view", ofType: "pdf")
-//        let fileUrl = URL(fileURLWithPath: filePath!)
-//        let request = URLRequest(url: fileUrl)
-//
-//        webView.load(request)
-        
-//        let htmlString = "<html><body><h1>Hello, World!</h1></body></html>"
-//            webView.loadHTMLString(htmlString, baseURL: nil)
-
+        // Load the PDF file
+        if let pdfPath = Bundle.main.path(forResource: "Documentation", ofType: "pdf"),
+            let pdfData = NSData(contentsOfFile: pdfPath) {
+            webView.load(pdfData as Data, mimeType: "application/pdf", characterEncodingName: "", baseURL: Bundle.main.bundleURL)
+        } else {
+            let htmlString = "<h1>Oops! Something went wrong.</h1>"
+            webView.loadHTMLString(htmlString, baseURL: nil)
+        }
     }
 
 }
