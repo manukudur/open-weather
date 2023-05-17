@@ -25,6 +25,7 @@
 		FC72CF592A0E7C24008183B0 /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72CF582A0E7C24008183B0 /* LocalStorageManager.swift */; };
 		FC73D8302A148DB600B10E52 /* Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC73D82F2A148DB600B10E52 /* Documentation.pdf */; };
 		FC73D8322A14999A00B10E52 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73D8312A14999A00B10E52 /* Constants.swift */; };
+		FC73D8362A14A51F00B10E52 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF50672A13B9B800B2926E /* CardView.swift */; };
 		FCDD600B2A09539A0022D833 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDD600A2A09539A0022D833 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC73D8362A14A51F00B10E52 /* CardView.swift in Sources */,
 				FCDD600B2A09539A0022D833 /* MapViewController.swift in Sources */,
 				FC6A677B2A0CB101002E2FB2 /* WeatherManager.swift in Sources */,
 				FC7016E92A11F4F80088BA36 /* ForecastData.swift in Sources */,
